@@ -19,7 +19,7 @@ def path_exist(source, destination, graph):
 nodes = int(input())
 
 graph = {}
-edges = []   # Всички ребра, които имаме
+edges = []  
 for _ in range(nodes):
     node, children_str = input().split(' -> ')
     children = children_str.split()
