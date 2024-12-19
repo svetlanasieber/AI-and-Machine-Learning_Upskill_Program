@@ -1,11 +1,12 @@
 ------------------------------------------------------------------------------
-• Analytical graphs: principles, creation, examples;
+• Analytical Graphs: Principles, Creation, Examples;
 ---------------------------------------------------------------------------------
-• Plots: histograms, scatterplots, line plots, pie charts. Usages and examples;
+• Plots: Histograms, Scatterplots, Line Plots, Pie Charts. Usages and Examples;
+---------------------------------------------------------------------------------
+• Enhancing Plots: Colors, Labels, Formatting;
 ------------------------------------------------------------------------------
-• Enhancing plots: colors, labels, formatting;
+• Telling the Correct Story;
 ------------------------------------------------------------------------------
-• Telling the correct story;
+• Exploratory Data Analysis: Motivation, Principles and Applications.
 ------------------------------------------------------------------------------
-• Exploratory data analysis: motivation, principles, applications.
-------------------------------------------------------------------------------
+
