@@ -1,27 +1,3 @@
-/*============================================================================
-	File:		ManyIndices.sql
-
-	Summary:	The script demonstrates what is the effect on the DML operations
-				when there are a lot of indexes on the table.
-
-				THIS SCRIPT IS PART OF THE Lecture: 
-				"Performance Tuning" for SoftUni, Sofia;
-				"Joins, Subqueries, CTE and Indices"
-
-	Date:		February 2015, January 2017
-
-	SQL Server Version: 2008 / 2012 / 2014 / 2016
-------------------------------------------------------------------------------
-	Written by Boris Hristov, SQL Server MVP
-
-	This script is intended only as a supplement to demos and lectures
-	given by SoftUni Team.  
-  
-	THIS CODE AND INFORMATION ARE PROVIDED "AS IS" WITHOUT WARRANTY OF 
-	ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT LIMITED 
-	TO THE IMPLIED WARRANTIES OF MERCHANTABILITY AND/OR FITNESS FOR A
-	PARTICULAR PURPOSE.
-============================================================================*/
 
 USE tempdb
 GO
