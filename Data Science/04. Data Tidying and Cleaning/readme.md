@@ -1,15 +1,15 @@
 ------------------------------------------------------------------------
-• Tidy data: properties, normalization;
+• Tidy Data: Normalization;
 ------------------------------------------------------------------------
-• Subsetting and sorting;
+• Subsetting and Sorting, Reshaping;
 ------------------------------------------------------------------------
-• Reshaping;
+• Data Summarization and Aggregation;
 ------------------------------------------------------------------------
-• Data summarization and aggregation;
+• Combining Datasets;
 ------------------------------------------------------------------------
-• Combining datasets;
+• Data Transformations;
 ------------------------------------------------------------------------
-• Data transformation;
+• Handling Outliers and Missing Values;
 ------------------------------------------------------------------------
-• Data cleaning process.
+• Data Cleaning Process.
 ------------------------------------------------------------------------
