@@ -1,6 +1,6 @@
 text = input()
 output = {}
-
+ 
 for char in text:
     if char != " ":
         if char not in output:
