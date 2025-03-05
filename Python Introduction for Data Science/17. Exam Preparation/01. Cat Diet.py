@@ -1,11 +1,10 @@
-# Input hier:
 percent_fats = int(input())
 percent_proteins = int(input())
 percent_carbohydrates = int(input())
 total_calories = int(input())
 percent_containing_water = int(input())
 
-# Calculations hier:
+
 total_grams_fats = (percent_fats * total_calories) / 9
 total_grams_proteins = (percent_proteins * total_calories) / 4
 total_grams_carbohydrates = (percent_carbohydrates * total_calories) / 4
