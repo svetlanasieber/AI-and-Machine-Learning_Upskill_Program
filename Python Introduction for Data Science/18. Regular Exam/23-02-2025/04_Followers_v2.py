@@ -35,11 +35,10 @@ def followers_tracker():
             else:
                 print(f"{username} doesn't exist.")
 
-    # Print results
+
     print(f"{len(followers)} followers")
     for username, data in followers.items():
         total = data["likes"] + data["comments"]
         print(f"{username}: {total}")
 
-# Example usage:
 followers_tracker()
