@@ -1,43 +1,34 @@
-# За да решите този проблем, ще трябва да категоризирате входящите числа
-# в различни диапазони и след това да изчислите процента на числата, които попадат във всеки диапазон.
-# Можете да направите това, като използвате поредица от броячи, по един за всеки диапазон,
-# и след това разделите всеки от тях на общия брой входни числа (n), за да получите процента.
+number_to_check = int(input())
 
-# Read the number of elements from the user
-n = int(input())
+percent_under_numbers = {
+    "under 200": 0,
+    "200  - 399": 0,
+    "400 - 599": 0,
+    "600 - 799": 0,
+    "over 800": 0
+}
 
-# Initialize counters for each range
-count_p1 = 0
-count_p2 = 0
-count_p3 = 0
-count_p4 = 0
-count_p5 = 0
+for _ in range(0, number_to_check):
+    number = int(input())
+    if number in range(0, 200):
+        percent_under_numbers["under 200"] += 1
+    elif number in range(200, 400):
+        percent_under_numbers["200  - 399"] += 1
+    elif number in range(400, 600):
+        percent_under_numbers["400 - 599"] += 1
+    elif number in range(500, 800):
+        percent_under_numbers["600 - 799"] += 1
+    elif number >= 800:
+        percent_under_numbers["over 800"] += 1
 
-# Read the numbers and update the counters
-for _ in range(n):
-    num = int(input())
-    if num < 200:
-        count_p1 += 1
-    elif 200 <= num <= 399:
-        count_p2 += 1
-    elif 400 <= num <= 599:
-        count_p3 += 1
-    elif 600 <= num <= 799:
-        count_p4 += 1
-    else:
-        count_p5 += 1
+under_twohundred = (percent_under_numbers["under 200"] / number_to_check) * 100
+twohundred_fourhundred = (percent_under_numbers["200  - 399"] / number_to_check) * 100
+fourhundred_sixhundred = (percent_under_numbers["400 - 599"] / number_to_check) * 100
+sixhundred_eithhundred = (percent_under_numbers["600 - 799"] / number_to_check) * 100
+over_eithhundred = (percent_under_numbers["over 800"] / number_to_check) * 100
 
-# Calculate and print the percentages
-print(f"{count_p1 / n * 100:.2f}%")
-print(f"{count_p2 / n * 100:.2f}%")
-print(f"{count_p3 / n * 100:.2f}%")
-print(f"{count_p4 / n * 100:.2f}%")
-print(f"{count_p5 / n * 100:.2f}%")
-
-# Тази програма първо инициализира броячите за всеки от петте диапазона
-# като count_p1, count_p2, count_p3, count_p4 и count_p5.
-# След това прочита n-те числа, като актуализира съответния брояч за всяко число.
-#
-# Накрая се изчисляват процентите,
-# като всеки брояч се разделя на n и се умножава по 100,
-# а след това се отпечатват с два знака след десетичната запетая.
+print("{:.2f}".format(under_twohundred) + "%")
+print("{:.2f}".format(twohundred_fourhundred) + "%")
+print("{:.2f}".format(fourhundred_sixhundred) + "%")
+print("{:.2f}".format(sixhundred_eithhundred) + "%")
+print("{:.2f}".format(over_eithhundred) + "%")
