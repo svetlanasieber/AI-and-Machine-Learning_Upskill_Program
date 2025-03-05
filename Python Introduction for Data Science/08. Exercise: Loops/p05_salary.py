@@ -1,46 +1,30 @@
-# Според отворения сайт в таба се налагат следните глоби:
-# •	"Facebook" -> 150 лв.
-# •	"Instagram" -> 100 лв.
-# •	"Reddit" -> 50 лв.
-
-# От конзолата се четат два реда:
-# •	Брой отворени табове в браузъра n - цяло число в интервала [1...10]
-# •	Заплата - число в интервала [500...1500]
-
-# След това n – на брой пъти се чете име на уебсайт – текст
-
-# Изход
-# •	Ако по време на проверката заплатата стане по-малка или равна на 0 лева, на конзолата се изписва
-# "You have lost your salary." и програмата приключва.
-# •	В противен случай след проверката на конзолата се изписва остатъкът от заплатата (да се изпише като цяло число).
-
-# Read the number of opened tabs and initial salary from the input
-n_tabs = int(input())
+open_tab_browser = int(input())
 salary = int(input())
 
-# Loop through each tab to check the website
-for _ in range(n_tabs):
-    website = input()
-    if website == "Facebook":
-        salary -= 150
-    elif website == "Instagram":
-        salary -= 100
-    elif website == "Reddit":
-        salary -= 50
+salary_info = {"penalty": {
+    "Facebook": 150,
+    "Instagram": 100,
+    "Reddit": 50, },
+    "tabs counter": {
+        "Facebook": 0,
+        "Instagram": 0,
+        "Reddit": 0}
+}
+salary_left = salary
+tabs_check = ["Facebook", "Instagram", "Reddit"]
+no_money_left = False
 
-    # Check if the salary is zero or negative, and if so, print a message and terminate the program
-    if salary <= 0:
+for tab in range(0, open_tab_browser):
+    tab_name = input()
+    if tab_name in tabs_check:
+        salary_left = salary_left - salary_info["penalty"][tab_name]
+    if salary_left <= 0:
+        no_money_left = True
         print("You have lost your salary.")
         break
-else:  # This will execute only if the loop wasn't broken (i.e., salary > 0)
-    print(salary)
 
-# Ето как работи кодът:
-#
-# Отчитаме броя на разделите и първоначалната заплата.
-# Преминаваме през цикъл, като прочитаме уебсайта, отворен във всеки раздел.
-# Изваждаме глобата от заплатата в зависимост от уебсайта.
-# Проверяваме дали заплатата е станала нула или отрицателна.
-# Ако е така, отпечатваме съобщение и излизаме от цикъла.
-# Ако цикълът завърши без прекъсване (което означава, че заплатата все още е положителна),
-# отпечатваме останалата заплата.
+if no_money_left == False:
+    if salary_left == salary:
+        print(salary_left)
+    else:
+        print(salary_left)
