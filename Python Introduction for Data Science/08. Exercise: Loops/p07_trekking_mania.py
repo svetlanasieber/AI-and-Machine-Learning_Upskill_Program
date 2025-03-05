@@ -1,65 +1,40 @@
-# •	Група до 5 човека – изкачват Мусала
-# •	Група от 6 до 12 човека – изкачват Монблан
-# •	Група от 13 до 25 човека – изкачват Килиманджаро
-# •	Група от 26 до 40 човека –  изкачват К2
-# •	Група от 41 или повече човека – изкачват Еверест
+number_groups = int(input())
 
-# Да се напише програма, която изчислява процента на катерачите изкачващи всеки връх.
+five_people_gorups = 0
+six_to_twelve_groups = 0
+thirteen_people_gorups = 0
+twenty_six_people_groups = 0
+over_foutry_one_people_groups = 0
+total_people = 0
+total_musala = 0
+total_monblan = 0
+total_kilimandjaro = 0
+total_ktwo = 0
+total_everest = 0
 
-# Вход
-# От конзолата се четат поредица от числа, всяко на отделен ред:
-# •	На първия ред – броя на групите от катерачи – цяло число в интервала [1...1000]
-# •	За всяка една група на отделен ред – броя на хората в групата – цяло число в интервала [1...1000]
+for groups in range(0, number_groups):
+    group = int(input())
+    total_people += group
+    if group <= 5:
+        five_people_gorups += 1
+        total_musala += group
+    elif 5 < group <= 12:
+        six_to_twelve_groups += 1
+        total_monblan += group
+    elif 12 < group <= 25:
+        thirteen_people_gorups += 1
+        total_kilimandjaro += group
+    elif 25 < group <= 40:
+        twenty_six_people_groups += 1
+        total_ktwo += group
+    elif group > 40:
+        over_foutry_one_people_groups += 1
+        total_everest += group
 
-# Изход
-# Да се отпечатат на конзолата 5 реда, всеки от които съдържа процент между 0.00% и 100.00% с точност до втората цифра след десетичната запетая.
-# •	Първи ред - процентът изкачващи Мусала
-# •	Втори ред – процентът изкачващи Монблан
-# •	Трети ред – процентът изкачващи Килиманджаро
-# •	Четвърти ред – процентът изкачващи К2
-# •	Пети ред – процентът изкачващи Еверест
+musala = total_musala / total_people * 100
+monblan = total_monblan / total_people * 100
+kilimandjaro = total_kilimandjaro / total_people * 100
+ktwo = total_ktwo / total_people * 100
+everest = total_everest / total_people * 100
 
-# За да решим този проблем, първо отчитаме броя на групите и след това размера на всяка група.
-# Въз основа на размера на всяка група актуализираме общия брой катерачи, които се стремят към всеки връх.
-# Накрая изчисляваме процентите и ги отпечатваме.
-
-# Number of groups
-num_groups = int(input())
-
-# Total climbers and climbers for each peak
-total_climbers = 0
-musala_climbers = 0
-monblan_climbers = 0
-kilimanjaro_climbers = 0
-k2_climbers = 0
-everest_climbers = 0
-
-# Read size for each group and update counts
-for _ in range(num_groups):
-    group_size = int(input())
-    total_climbers += group_size
-
-    if group_size <= 5:
-        musala_climbers += group_size
-    elif group_size >= 6 and group_size <= 12:
-        monblan_climbers += group_size
-    elif group_size >= 13 and group_size <= 25:
-        kilimanjaro_climbers += group_size
-    elif group_size >= 26 and group_size <= 40:
-        k2_climbers += group_size
-    else:
-        everest_climbers += group_size
-
-# Calculate percentages
-musala_percent = (musala_climbers / total_climbers) * 100
-monblan_percent = (monblan_climbers / total_climbers) * 100
-kilimanjaro_percent = (kilimanjaro_climbers / total_climbers) * 100
-k2_percent = (k2_climbers / total_climbers) * 100
-everest_percent = (everest_climbers / total_climbers) * 100
-
-# Print percentages
-print(f"{musala_percent:.2f}%")
-print(f"{monblan_percent:.2f}%")
-print(f"{kilimanjaro_percent:.2f}%")
-print(f"{k2_percent:.2f}%")
-print(f"{everest_percent:.2f}%")
+print(f"{musala:.2f}%\n{monblan:.2f}%\n{kilimandjaro:.2f}%\n{ktwo:.2f}%\n{everest:.2f}%")
